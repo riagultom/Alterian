@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Detail Try Out</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#f7f8fb;
+    margin:0;
+}
+
+.container{
+    width:800px;
+    margin:40px auto;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+h1{
+    color:#1F3A8F;
+}
+
+.coin{
+    background:#FFF5D8;
+    padding:15px;
+    border-radius:10px;
+    margin:20px 0;
+}
+
+button{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+header{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    background:#fff;
+    padding:18px 30px;
+    border-bottom:1px solid #ddd;
+}
+
+.back-btn{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.back-btn:hover{
+    background:#16306f;
+}
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.saldo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#FFF2CC;
+    padding:10px 18px;
+    border-radius:15px;
+    border:1px solid #FFD15C;
+}
+
+.saldo img{
+    width:45px;
+    height:45px;
+}
+
+.saldo-text small{
+    display:block;
+    color:#666;
+    font-size:12px;
+}
+
+.saldo-text h3{
+    margin:0;
+    color:#1F3A8F;
+}
+
+.topup-btn{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.topup-btn:hover{
+    background:#16306f;
+}
+/* ================= TEMA ORANGE ELEGAN ================= */
+
+body{
+    background:#FAF7F2;
+}
+
+/* Header */
+header{
+    background:#fff;
+    border-bottom:1px solid #D9B98F;
+}
+
+/* Judul */
+h1{
+    color:#C96A16;
+}
+
+/* Card */
+.card{
+    border:1px solid #E6D3B8;
+}
+
+/* Box Coin */
+.coin{
+    background:#F8F3EC;
+    border:1px solid #E6D3B8;
+}
+
+/* Tombol */
+button{
+    background:#C96A16;
+    color:#fff;
+}
+
+button:hover{
+    background:#A55410;
+}
+
+/* Tombol Kembali */
+.back-btn{
+    background:#C96A16;
+    color:#fff;
+}
+
+.back-btn:hover{
+    background:#A55410;
+}
+
+/* Saldo */
+.saldo{
+    background:#F3E5D0;
+    border:1px solid #D9B98F;
+}
+
+.saldo-text h3{
+    color:#C96A16;
+}
+
+/* Tombol Top Up */
+.topup-btn{
+    background:#C96A16;
+    color:#fff;
+}
+
+.topup-btn:hover{
+    background:#A55410;
+}
+</style>
+
+</head>
+
+<body>
+<header>
+
+<div class="header-right">
+
+    <div class="saldo">
+
+        <img src="coin.png" alt="Coin">
+
+        <div class="saldo-text">
+            <small>Tesseract</small>
+            <h3>0</h3>
+        </div>
+
+        <button class="topup-btn"
+                onclick="location.href='topup.html'">
+            + Top Up
+        </button>
+
+    </div> <!-- tutup saldo -->
+
+    <button class="back-btn"
+            onclick="location.href='tryout.html'">
+        ← Kembali
+    </button>
+
+</div> <!-- tutup header-right -->
+
+</header>
+<div class="container">
+
+<div class="card">
+
+<h1>TRY OUT SSU ITB 2026</h1>
+
+<p>
+
+Try Out ini berisi latihan soal sesuai materi
+SSU ITB terbaru.
+
+</p>
+
+<div class="coin">
+
+<h2>Biaya Masuk</h2>
+
+<h1>150 Tesseract</h1>
+
+</div>
+
+<button onclick="location.href='bayar_tryout.html'">
+
+Bayar dengan Tesseract
+
+</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cakra Edu - Login</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#F7F8FB;display:flex;justify-content:center;align-items:center;height:100vh}
+.container{background:#fff;padding:40px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.1);width:380px}
+h1{text-align:center;color:#1F3A8F}
+button,input,select{width:100%;padding:12px;margin-top:12px;border-radius:8px;border:1px solid #ccc;box-sizing:border-box}
+.btn{background:#1F3A8F;color:#fff;border:none;cursor:pointer}
+.btn:hover{background:#152960}
+.hidden{display:none}
+.switch{margin-top:15px;text-align:center}
+.switch button{border:none;background:none;color:#1F3A8F;cursor:pointer}
+/* ================= TEMA ORANGE ELEGAN ================= */
+
+body{
+    background:#FAF7F2;
+}
+
+.container{
+    border:1px solid #E6D3B8;
+    box-shadow:0 10px 30px rgba(201,106,22,.12);
+}
+
+h1{
+    color:#C96A16;
+}
+
+input,
+select{
+    border:1px solid #D9B98F;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#C96A16;
+    box-shadow:0 0 6px rgba(201,106,22,.25);
+}
+
+.btn{
+    background:#C96A16;
+    color:#fff;
+}
+
+.btn:hover{
+    background:#A55410;
+}
+
+.switch button{
+    color:#C96A16;
+}
+
+.switch button:hover{
+    color:#A55410;
+    text-decoration:underline;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div id="gate">
+<h1>Altera</h1>
+<button class="btn" onclick="show('daftar')">Daftar</button>
+<button onclick="show('masuk')">Masuk</button>
+</div>
+
+<div id="daftar" class="hidden">
+<h2>Daftar</h2>
+<input placeholder="Nama Lengkap">
+<select><option>Kelas 11</option><option>Kelas 12</option><option>Gap Year</option></select>
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+<button class="btn" onclick="location.href='program.html'">Daftar</button>
+<div class="switch"><button onclick="show('gate')">Kembali</button></div>
+</div>
+
+<div id="masuk" class="hidden">
+<h2>Masuk</h2>
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+<button class="btn" onclick="location.href='program.html'">Masuk</button>
+<div class="switch"><button onclick="show('gate')">Kembali</button></div>
+</div>
+</div>
+<script>
+function show(id){
+['gate','daftar','masuk'].forEach(x=>document.getElementById(x).classList.add('hidden'));
+document.getElementById(id).classList.remove('hidden');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pembayaran Program</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f7f8fb;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:18px 30px;
+    border-bottom:1px solid #ddd;
+}
+
+header h2{
+    margin:0;
+    color:#1F3A8F;
+}
+
+nav a{
+    margin:0 8px;
+    text-decoration:none;
+    color:#333;
+    padding:8px 12px;
+    border-radius:6px;
+}
+
+nav a:hover{
+    background:#1F3A8F;
+    color:#fff;
+}
+
+main{
+    max-width:800px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:30px;
+}
+
+.card h1{
+    color:#1F3A8F;
+    margin-top:0;
+}
+
+.info{
+    margin:25px 0;
+}
+
+.info p{
+    margin:12px 0;
+    font-size:16px;
+}
+
+.total{
+    background:#eef4ff;
+    border-left:5px solid #1F3A8F;
+    padding:15px;
+    border-radius:8px;
+    margin:25px 0;
+}
+
+.total h2{
+    margin:0;
+    color:#1F3A8F;
+}
+
+.metode{
+    margin-top:25px;
+}
+
+.metode label{
+    display:block;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    margin-bottom:12px;
+    cursor:pointer;
+}
+
+.metode label:hover{
+    background:#f2f6ff;
+}
+
+.button-group{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+}
+
+button{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+button:hover{
+    background:#16306f;
+}
+/* ================= TEMA ORANGE ELEGAN ================= */
+
+body{
+    background:#FAF7F2;
+}
+
+/* Header */
+header{
+    background:#fff;
+    border-bottom:1px solid #D9B98F;
+}
+
+header h2{
+    color:#C96A16;
+}
+
+/* Navigasi */
+nav a:hover{
+    background:#C96A16;
+    color:#fff;
+}
+
+/* Card */
+.card{
+    border:1px solid #E6D3B8;
+}
+
+/* Judul */
+.card h1{
+    color:#C96A16;
+}
+
+/* Total */
+.total{
+    background:#F8F3EC;
+    border-left:5px solid #C96A16;
+}
+
+.total h2{
+    color:#C96A16;
+}
+
+/* Pilihan Metode Pembayaran */
+.metode label{
+    border:1px solid #D9B98F;
+}
+
+.metode label:hover{
+    background:#F8F3EC;
+    border-color:#C96A16;
+}
+
+/* Tombol */
+button{
+    background:#C96A16;
+    color:#fff;
+}
+
+button:hover{
+    background:#A55410;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h2>Altera</h2>
+<button onclick="location.href='program.html'">
+        ← Kembali
+    </button>
+
+
+</header>
+
+<main>
+
+<div class="card">
+
+<h1>Transaksi Pembayaran</h1>
+
+<div class="info">
+
+<p><strong>Program :</strong> Fundamental</p>
+
+<p><strong>Durasi :</strong>1 Tahun</p>
+
+<p><strong>Pertemuan :</strong>Senin-Sabtu</p>
+
+</div>
+
+<div class="total">
+
+<h2>Total Pembayaran</h2>
+
+<h1 style="color:#1F3A8F;">Rp1.500.000</h1>
+
+</div>
+
+<div class="metode">
+
+<h3>Pilih Metode Pembayaran</h3>
+
+<label>
+<input type="radio" name="bayar">
+ Transfer Bank
+</label>
+
+<label>
+<input type="radio" name="bayar">
+ QRIS
+</label>
+
+<label>
+<input type="radio" name="bayar">
+ E-Wallet (OVO / GoPay / DANA)
+</label>
+
+<label>
+<input type="radio" name="bayar">
+ Virtual Account
+</label>
+
+</div>
+
+<div class="button-group">
+
+<button onclick="location.href='detailprogram.html'">
+
+← Kembali
+
+</button>
+
+<button onclick="location.href='berhasil.html'">
+
+Bayar Sekarang
+
+</button>
+
+</div>
+
+</div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang='id'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Video</title><style>
+body{margin:0;font-family:Arial;background:#f7f8fb}
+header{display:flex;justify-content:space-between;align-items:center;background:#fff;padding:18px 30px;border-bottom:1px solid #ddd}
+nav a{margin:0 8px;text-decoration:none;color:#333;padding:8px 12px;border-radius:6px}
+nav a.active{background:#1F3A8F;color:#fff}
+main{max-width:900px;margin:40px auto;padding:0 20px}
+.card{background:#fff;border:1px solid #ddd;border-radius:10px;padding:20px;margin-bottom:15px}
+button{background:#1F3A8F;color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer}
+.profile-menu{
+    position:relative;
+    display:inline-block;
+}
+
+.profile-btn{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.profile-btn:hover{
+    background:#16306f;
+}
+
+.dropdown{
+    display:none;
+    position:absolute;
+    right:0;
+    top:45px;
+    background:white;
+    min-width:220px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    overflow:hidden;
+    z-index:100;
+}
+
+.dropdown a{
+    display:block;
+    padding:12px 15px;
+    text-decoration:none;
+    color:#333;
+}
+
+.dropdown a:hover{
+    background:#f2f2f2;
+}
+
+.show{
+    display:block;
+}
+/* ================= TEMA ORANGE ELEGAN ================= */
+
+body{
+    background:#FAF7F2;
+}
+
+/* Header */
+header{
+    background:#fff;
+    border-bottom:1px solid #D9B98F;
+}
+
+/* Navigasi */
+nav a.active{
+    background:#C96A16;
+    color:#fff;
+}
+
+nav a:hover{
+    background:#C96A16;
+    color:#fff;
+}
+
+/* Card */
+.card{
+    border:1px solid #E6D3B8;
+}
+
+/* Tombol */
+button{
+    background:#C96A16;
+    color:#fff;
+}
+
+button:hover{
+    background:#A55410;
+}
+
+/* Tombol Profil */
+.profile-btn{
+    background:#C96A16;
+    color:#fff;
+}
+
+.profile-btn:hover{
+    background:#A55410;
+}
+
+/* Dropdown */
+.dropdown{
+    border:1px solid #D9B98F;
+}
+
+.dropdown a:hover{
+    background:#F8F3EC;
+}
+</style>
+</head>
+<body>
+<header>
+    <h2>Altera</h2>
+
+    <button onclick="location.href='ayobelajar.html'">
+        ← Kembali
+    </button>
+</header>
+<main>
+    <h1>Video Pembelajaran</h1>
+    <div class='card'>
+        <h3>Fungsi Kuadrat</h3>
+        <p>13 menit</p>
+        <button onclick="location.href='fungsikuadrat.html'">
+        Tonton
+    </button>
+    </div>
+<div class='card'>
+    <h3>Pengenalan Bilangan</h3>
+    <p>5 menit</p>
+    <button onclick="location.href='pengenalanbilangan.html'">
+        Tonton
+    </button>
+</div>
+<div class='card'>
+    <h3>Operasi Hitung </h3>
+    <p>8 menit</p>
+    <button onclick="location.href='operasihitung.html'">
+        Tonton
+    </button>
+</div>
+<script>
+function toggleMenu(){
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+window.onclick = function(event){
+    if(!event.target.matches('.profile-btn')){
+        var menu = document.getElementById("dropdownMenu");
+        if(menu.classList.contains("show")){
+            menu.classList.remove("show");
+        }
+    }
+}
+</script>
+</main>
+</body>
+</html>

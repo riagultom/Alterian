@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Program Belajar | Cakra Edu</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f7f8fb;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 30px;
+    background:#fff;
+    border-bottom:1px solid #ddd;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#1F3A8F;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    padding:10px 16px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+nav a.active{
+    background:#1F3A8F;
+    color:white;
+}
+
+nav a:hover{
+    background:#1F3A8F;
+    color:white;
+}
+
+/* ================= HEADER RIGHT ================= */
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.saldo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#FFF2CC;
+    padding:10px 18px;
+    border-radius:15px;
+    border:1px solid #FFD15C;
+}
+
+.saldo img{
+    width:45px;
+    height:45px;
+}
+
+.saldo-text small{
+    display:block;
+    color:#666;
+    font-size:12px;
+}
+
+.saldo-text h3{
+    margin:0;
+    color:#1F3A8F;
+}
+
+.topup-btn{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.topup-btn:hover{
+    background:#16306f;
+}
+
+/* ================= PROFILE ================= */
+
+.profile-menu{
+    position:relative;
+}
+
+.profile-btn{
+    background:white;
+    border:2px solid #f0a000;
+    color:#f0a000;
+    padding:10px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.profile-btn:hover{
+    background:#f0a000;
+    color:white;
+}
+
+.dropdown{
+    display:none;
+    position:absolute;
+    right:0;
+    top:55px;
+    background:white;
+    width:220px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    overflow:hidden;
+}
+
+.dropdown a{
+    display:block;
+    padding:14px;
+    color:#333;
+    text-decoration:none;
+}
+
+.dropdown a:hover{
+    background:#f2f2f2;
+}
+
+.show{
+    display:block;
+}
+
+/* ================= CONTENT ================= */
+
+main{
+    max-width:1100px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+main h1{
+    color:#1F3A8F;
+    margin-bottom:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:25px;
+    display:flex;
+    gap:20px;
+    border:1px solid #ddd;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.card img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.card-content{
+    flex:1;
+}
+
+.card-content h3{
+    color:#1F3A8F;
+    margin-bottom:12px;
+}
+
+.card-content p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+button{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#16306f;
+}
+body{
+    background:#FFF8F1;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:#fff;
+    border-bottom:1px solid #FFD7A8;
+}
+
+.logo{
+    color:#F57C00;
+}
+
+nav a.active{
+    background:#F57C00;
+    color:white;
+}
+
+nav a:hover{
+    background:#F57C00;
+    color:white;
+}
+
+/* ================= HEADER RIGHT ================= */
+
+.saldo{
+    background:#FFF3E0;
+    border:1px solid #FFB74D;
+}
+
+.saldo-text h3{
+    color:#F57C00;
+}
+
+.topup-btn{
+    background:#F57C00;
+    color:white;
+}
+
+.topup-btn:hover{
+    background:#E65100;
+}
+
+/* ================= PROFILE ================= */
+
+.profile-btn{
+    background:white;
+    border:2px solid #F57C00;
+    color:#F57C00;
+}
+
+.profile-btn:hover{
+    background:#F57C00;
+    color:white;
+}
+
+/* ================= CONTENT ================= */
+
+main h1{
+    color:#F57C00;
+}
+
+.card-content h3{
+    color:#F57C00;
+}
+
+button{
+    background:#F57C00;
+    color:white;
+}
+
+button:hover{
+    background:#E65100;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+    Altera
+</div>
+
+<nav>
+
+<a href="program.html" class="active">
+Program Belajar
+</a>
+
+<a href="tryout2.html">
+Try Out
+</a>
+
+</nav>
+
+<div class="header-right">
+
+<div class="saldo">
+
+<img src="coin.png">
+
+<div class="saldo-text">
+<small>Tesseract</small>
+<h3>200</h3>
+</div>
+
+<button class="topup-btn"
+onclick="location.href='topup.html'">
++ Top Up
+</button>
+
+</div>
+
+<div class="profile-menu">
+
+<button class="profile-btn"
+onclick="toggleMenu()">
+
+👤 Profil
+
+</button>
+
+<div class="dropdown" id="dropdownMenu">
+
+<a href="akun.html">
+Akun Saya
+</a>
+
+<a href="riwayat.html">
+Riwayat Pembelian Paket
+</a>
+
+<a href="index.html">
+Logout
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<main>
+
+<h1>Program Belajar</h1>
+<!-- ================= PROGRAM 1 ================= -->
+
+<div class="card">
+
+    <img src="cat.webp" alt="Fundamental">
+
+    <div class="card-content">
+
+        <h3>📘 Fundamental</h3>
+
+        <p>
+            Program belajar dasar untuk persiapan SNBT.
+            Materi dimulai dari konsep dasar setiap mata pelajaran
+            dengan pembahasan yang mudah dipahami.
+        </p>
+
+        <p><strong>Periode :</strong> 26 Juni 2026 - 30 April 2027</p>
+
+        <button onclick="location.href='detailprogram.html'">
+            Lihat Detail
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= PROGRAM 2 ================= -->
+
+<div class="card">
+
+    <img src="cat1.jpg" alt="Akselerasi">
+
+    <div class="card-content">
+
+        <h3>🚀 Akselerasi</h3>
+
+        <p>
+            Program intensif dengan latihan soal lebih banyak,
+            pembahasan mendalam, dan simulasi Try Out setiap minggu.
+        </p>
+
+        <p><strong>Periode :</strong> 26 Juni 2026 - 30 April 2027</p>
+
+        <button onclick="location.href='detailprogram.html'">
+            Lihat Detail
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= PROGRAM 3 ================= -->
+
+<div class="card">
+
+    <img src="cat2.webp" alt="Fundamental + TKA">
+
+    <div class="card-content">
+
+        <h3>🎓 Fundamental + TKA</h3>
+
+        <p>
+            Paket lengkap Fundamental ditambah materi TKA
+            sehingga lebih siap menghadapi seleksi masuk perguruan tinggi.
+        </p>
+
+        <p><strong>Periode :</strong> 26 Juni 2026 - 30 April 2027</p>
+
+        <button onclick="location.href='detailprogram.html'">
+            Lihat Detail
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= PROGRAM 4 ================= -->
+
+<div class="card">
+
+    <img src="cat.webp" alt="Akselerasi + TKA">
+
+    <div class="card-content">
+
+        <h3>🏆 Akselerasi + TKA</h3>
+
+        <p>
+            Program premium dengan kelas intensif,
+            Try Out mingguan, mentor khusus,
+            serta pembelajaran TKA secara lengkap.
+        </p>
+
+        <p><strong>Periode :</strong> 26 Juni 2026 - 30 April 2027</p>
+
+        <button onclick="location.href='detailprogram.html'">
+            Lihat Detail
+        </button>
+
+    </div>
+
+</div>
+</main>
+
+<script>
+
+// ================= DROPDOWN PROFIL =================
+
+function toggleMenu(){
+
+    document.getElementById("dropdownMenu").classList.toggle("show");
+
+}
+
+// Menutup dropdown jika klik di luar menu
+window.onclick = function(event){
+
+    if(!event.target.closest(".profile-menu")){
+
+        var menu = document.getElementById("dropdownMenu");
+
+        if(menu.classList.contains("show")){
+
+            menu.classList.remove("show");
+
+        }
+
+    }
+
+}
+
+// ================= TOMBOL TOP UP =================
+
+document.querySelector(".topup-btn").addEventListener("click",function(){
+
+    alert("Menu Top Up akan segera dibuka.");
+
+});
+
+</script>
+
+</body>
+</html>

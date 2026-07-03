@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Altera — Daftar atau Masuk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<body>
+
+<div id="app">
+
+  <div class="topbar" id="topbarGuest">
+    <a href="#" class="logo"><span class="dot"></span>Altera</a>
+  </div>
+
+  <div class="topbar with-nav hidden" id="topbarApp">
+    <a href="#" class="logo"><span class="dot"></span>Altera</a>
+
+    <div class="topbar-center">
+      <button class="topbar-link" data-tab="program" onclick="showTab('program')">Program Belajar</button>
+      <button class="topbar-link" data-tab="tryout" onclick="showTab('tryout')">Try Out</button>
+      <button class="topbar-link" data-tab="video" onclick="showTab('video')">Video Pembelajaran</button>
+    </div>
+
+    <div class="topbar-right">
+      <button class="profile-btn" onclick="toggleProfileDropdown()">
+        <span class="profile-avatar" id="profileAvatarInitial">?</span>
+        <span id="profileBtnName">Profil</span>
+        <span class="profile-caret">▾</span>
+      </button>
+      <div class="profile-dropdown" id="profileDropdown">
+        <div class="profile-dropdown-head">
+          <div class="pd-name" id="pdName">—</div>
+          <div class="pd-email" id="pdEmail">—</div>
+        </div>
+        <button class="profile-dropdown-item" onclick="showTab('program'); closeProfileDropdown();">Lihat Program Saya</button>
+        <button class="profile-dropdown-item danger" onclick="logout()">Keluar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-tabbar hidden" id="mobileTabbar">
+    <button class="topbar-link" data-tab="program" onclick="showTab('program')">Program Belajar</button>
+    <button class="topbar-link" data-tab="tryout" onclick="showTab('tryout')">Try Out</button>
+    <button class="topbar-link" data-tab="video" onclick="showTab('video')">Video Pembelajaran</button>
+  </div>
+
+  <div class="screen">
+
+    <!-- ===== SCREEN 1: GATE ===== -->
+    <div class="gate-card" id="screen-gate">
+      <div class="gate-eyebrow">● Les Privat Persiapan PTN</div>
+      <h1>Mau lanjut belajar, atau mulai dari awal?</h1>
+      <p class="lead">Pilih salah satu untuk melanjutkan ke akun kamu.</p>
+
+      <div class="gate-actions">
+        <button class="gate-btn gate-btn-primary" onclick="showScreen('daftar')">
+          <span class="label-block">
+            <span class="main">Daftar</span>
+            <span class="sub">Belum punya akun, mulai dari sini</span>
+          </span>
+          <span class="arrow">→</span>
+        </button>
+
+        <button class="gate-btn gate-btn-secondary" onclick="showScreen('masuk')">
+          <span class="label-block">
+            <span class="main">Masuk</span>
+            <span class="sub">Sudah punya akun</span>
+          </span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN 2: DAFTAR ===== -->
+    <div class="form-card hidden" id="screen-daftar">
+      <button class="form-back" onclick="showScreen('gate')">← Kembali</button>
+      <h2>Buat akun baru</h2>
+      <p class="form-desc">Isi data di bawah untuk mulai program les privat persiapan PTN.</p>
+
+      <div class="form-alert" id="daftarAlert">Lengkapi semua bidang yang wajib diisi.</div>
+
+      <form id="formDaftar" novalidate>
+        <div class="field-block" data-field="nama">
+          <label for="daftarNama">Nama Lengkap</label>
+          <input type="text" id="daftarNama" placeholder="Nama siswa">
+          <span class="field-error">Nama wajib diisi.</span>
+        </div>
+
+        <div class="field-row">
+          <div class="field-block" data-field="kelas">
+            <label for="daftarKelas">Kelas Saat Ini</label>
+            <select id="daftarKelas">
+              <option value="" selected disabled>Pilih kelas</option>
+              <option>Kelas 11</option>
+              <option>Kelas 12</option>
+              <option>Gap Year</option>
+            </select>
+            <span class="field-error">Pilih kelas kamu.</span>
+          </div>
+          <div class="field-block" data-field="jurusan">
+            <label for="daftarJurusan">Minat Jurusan</label>
+            <select id="daftarJurusan">
+              <option value="" selected disabled>Pilih minat</option>
+              <option>Saintek</option>
+              <option>Soshum</option>
+              <option>Belum yakin</option>
+            </select>
+            <span class="field-error">Pilih minat jurusan.</span>
+          </div>
+        </div>
+
+        <div class="field-block" data-field="wa">
+          <label for="daftarWa">Nomor WhatsApp</label>
+          <input type="tel" id="daftarWa" placeholder="08xx-xxxx-xxxx">
+          <span class="field-error">Nomor WhatsApp wajib diisi.</span>
+        </div>
+
+        <div class="field-block" data-field="email">
+          <label for="daftarEmail">Email</label>
+          <input type="email" id="daftarEmail" placeholder="nama@email.com">
+          <span class="field-error">Masukkan email yang valid.</span>
+        </div>
+
+        <div class="field-block" data-field="password">
+          <label for="daftarPassword">Buat Password</label>
+          <input type="password" id="daftarPassword" placeholder="Minimal 6 karakter">
+          <span class="field-error">Password minimal 6 karakter.</span>
+        </div>
+
+        <button type="submit" class="btn-submit">Buat Akun &amp; Lanjutkan</button>
+      </form>
+
+      <div class="form-switch">Sudah punya akun? <button onclick="showScreen('masuk')">Masuk di sini</button></div>
+    </div>
+
+    <!-- ===== SCREEN 3: MASUK ===== -->
+    <div class="form-card hidden" id="screen-masuk">
+      <button class="form-back" onclick="showScreen('gate')">← Kembali</button>
+      <h2>Masuk ke akun kamu</h2>
+      <p class="form-desc">Gunakan email dan password yang sudah didaftarkan.</p>
+
+      <div class="form-alert" id="masukAlert">Email atau password belum diisi.</div>
+
+      <form id="formMasuk" novalidate>
+        <div class="field-block" data-field="email">
+          <label for="masukEmail">Email</label>
+          <input type="email" id="masukEmail" placeholder="nama@email.com">
+          <span class="field-error">Masukkan email yang valid.</span>
+        </div>
+
+        <div class="field-block" data-field="password">
+          <label for="masukPassword">Password</label>
+          <input type="password" id="masukPassword" placeholder="Password kamu">
+          <span class="field-error">Password wajib diisi.</span>
+        </div>
+
+        <button type="submit" class="btn-submit">Masuk</button>
+      </form>
+
+      <div class="form-switch">Belum punya akun? <button onclick="showScreen('daftar')">Daftar di sini</button></div>
+    </div>
+
+    <!-- ===== SCREEN 4: PROGRAM BELAJAR (tab default setelah login) ===== -->
+    <div class="content-area hidden" id="screen-program">
+      <div class="sub-shell">
+        <div class="sub-header">
+          <h2>Program Belajar</h2>
+          <p>Program yang sedang berjalan atau bisa kamu ikuti.</p>
+        </div>
+      <div class="sub-list">
+        <div class="sub-item">
+          <div class="sub-item-main">
+            <h4>Privat 1-on-1 — Matematika</h4>
+            <p>Fokus penalaran matematika, 2x per minggu.</p>
+          </div>
+          <div class="sub-item-meta">
+            <span class="sub-tag gold">Sedang berjalan</span>
+            <button class="sub-btn">Lihat Detail</button>
+          </div>
+        </div>
+        <div class="sub-item">
+          <div class="sub-item-main">
+            <h4>Kelompok Kecil — Literasi B. Indonesia</h4>
+            <p>Belajar bersama 3-4 siswa, 3x per minggu.</p>
+          </div>
+          <div class="sub-item-meta">
+            <span class="sub-tag">Belum diikuti</span>
+            <button class="sub-btn">Daftar Program</button>
+          </div>
+        </div>
+        <div class="sub-item">
+          <div class="sub-item-main">
+            <h4>Intensif Liburan — Semua Mapel</h4>
+            <p>Program kilat 2 minggu untuk mengejar materi tertinggal.</p>
+          </div>
+          <div class="sub-item-meta">
+            <span class="sub-tag">Belum diikuti</span>
+            <button class="sub-btn">Daftar Program</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN 6: TRY OUT ===== -->
+    <div class="content-area hidden" id="screen-tryout">
+      <div class="sub-shell">
+      <div class="sub-header">
+        <h2>Try Out</h2>
+        <p>Jadwal latihan soal UTBK-SNBT dan riwayat skor kamu.</p>
+      </div>
+      <div class="sub-list">
+        <div class="sub-item">
+          <div class="sub-item-main">
+            <h4>Try Out #6 — Penalaran Matematika</h4>
+            <p>20 soal · 30 menit · skor terakhir: 540</p>
+          </div>
+          <div class="sub-item-meta">
+            <span class="sub-tag gold">Sudah selesai</span>
+            <button class="sub-btn">Lihat Pembahasan</button>
+          </div>
+        </div>
+        <div class="sub-item">
+          <div class="sub-item-main">
+            <h4>Try Out #7 — Literasi B. Inggris</h4>
+            <p>20 soal · 30 menit · dibuka 1 Juli 2026</p>
+          </div>
+          <div class="sub-item-meta">
+            <span class="sub-tag">Belum dibuka</span>
+            <button class="sub-btn">Lihat Detail</button>
+          </div>
+        </div>
+        <div class="sub-item">
+          <div class="sub-item-main">
+            <h4>Try Out Akbar — Simulasi Penuh</h4>
+            <p>160 soal · 195 menit · seperti UTBK asli</p>
+          </div>
+          <div class="sub-item-meta">
+            <span class="sub-tag">Belum dibuka</span>
+            <button class="sub-btn">Lihat Detail</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- ===== SCREEN 7: VIDEO PEMBELAJARAN ===== -->
+    <div class="content-area hidden" id="screen-video">
+      <div class="sub-shell">
+      <div class="sub-header">
+        <h2>Video Pembelajaran</h2>
+        <p>Materi rekaman yang bisa ditonton ulang kapan saja.</p>
+      </div>
+      <div class="sub-list">
+        <div class="sub-item">
+          <div class="sub-item-main">
+            <h4>Konsep Dasar Fungsi Kuadrat</h4>
+            <p>Penalaran Matematika · 18 menit</p>
+          </div>
+          <div class="sub-item-meta">
+            <span class="sub-tag gold">Sudah ditonton</span>
+            <button class="sub-btn">Tonton Lagi</button>
+          </div>
+        </div>
+        <div class="sub-item">
+          <div class="sub-item-main">
+            <h4>Strategi Membaca Cepat Teks Panjang</h4>
+            <p>Literasi B. Indonesia · 22 menit</p>
+          </div>
+          <div class="sub-item-meta">
+            <span class="sub-tag">Belum ditonton</span>
+            <button class="sub-btn">Tonton Sekarang</button>
+          </div>
+        </div>
+        <div class="sub-item">
+          <div class="sub-item-main">
+            <h4>Tense dalam Soal Literasi Bahasa Inggris</h4>
+            <p>Literasi B. Inggris · 15 menit</p>
+          </div>
+          <div class="sub-item-meta">
+            <span class="sub-tag">Belum ditonton</span>
+            <button class="sub-btn">Tonton Sekarang</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // Simulasi penyimpanan data sementara (bukan database permanen)
+  let currentUser = null;
+
+  function showScreen(name){
+    document.querySelectorAll('.gate-card, .form-card').forEach(el => el.classList.add('hidden'));
+    const target = document.getElementById('screen-' + name);
+    if (target) target.classList.remove('hidden');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  function enterApp(){
+    document.getElementById('topbarGuest').classList.add('hidden');
+    document.getElementById('topbarApp').classList.remove('hidden');
+    document.getElementById('mobileTabbar').classList.remove('hidden');
+    document.querySelectorAll('.gate-card, .form-card').forEach(el => el.classList.add('hidden'));
+    showTab('program');
+  }
+
+  function showTab(name){
+    document.querySelectorAll('.content-area').forEach(el => el.classList.add('hidden'));
+    document.getElementById('screen-' + name).classList.remove('hidden');
+    document.querySelectorAll('.topbar-link').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.topbar-link[data-tab="' + name + '"]').forEach(btn => btn.classList.add('active'));
+    closeProfileDropdown();
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  function toggleProfileDropdown(){
+    document.getElementById('profileDropdown').classList.toggle('open');
+  }
+  function closeProfileDropdown(){
+    document.getElementById('profileDropdown').classList.remove('open');
+  }
+  // Tutup dropdown profile kalau klik di luar
+  document.addEventListener('click', function(e){
+    const dropdown = document.getElementById('profileDropdown');
+    const btn = e.target.closest('.profile-btn');
+    const inside = e.target.closest('.profile-dropdown');
+    if (!btn && !inside) closeProfileDropdown();
+  });
+
+  function clearErrors(formEl){
+    formEl.querySelectorAll('.field-block').forEach(fb => fb.classList.remove('invalid'));
+  }
+
+  function markInvalid(formEl, fieldName){
+    const fb = formEl.querySelector('[data-field="' + fieldName + '"]');
+    if (fb) fb.classList.add('invalid');
+  }
+
+  // ---- FORM DAFTAR ----
+  document.getElementById('formDaftar').addEventListener('submit', function(e){
+    e.preventDefault();
+    const form = this;
+    clearErrors(form);
+    document.getElementById('daftarAlert').style.display = 'none';
+
+    const nama = document.getElementById('daftarNama').value.trim();
+    const kelas = document.getElementById('daftarKelas').value;
+    const jurusan = document.getElementById('daftarJurusan').value;
+    const wa = document.getElementById('daftarWa').value.trim();
+    const email = document.getElementById('daftarEmail').value.trim();
+    const password = document.getElementById('daftarPassword').value;
+
+    let valid = true;
+    if (!nama) { markInvalid(form, 'nama'); valid = false; }
+    if (!kelas) { markInvalid(form, 'kelas'); valid = false; }
+    if (!jurusan) { markInvalid(form, 'jurusan'); valid = false; }
+    if (!wa) { markInvalid(form, 'wa'); valid = false; }
+    if (!email || !email.includes('@')) { markInvalid(form, 'email'); valid = false; }
+    if (!password || password.length < 6) { markInvalid(form, 'password'); valid = false; }
+
+    if (!valid){
+      document.getElementById('daftarAlert').style.display = 'block';
+      return;
+    }
+
+    currentUser = { nama, kelas, jurusan, wa, email, via: 'daftar' };
+    renderProfile();
+    enterApp();
+  });
+
+  // ---- FORM MASUK ----
+  document.getElementById('formMasuk').addEventListener('submit', function(e){
+    e.preventDefault();
+    const form = this;
+    clearErrors(form);
+    document.getElementById('masukAlert').style.display = 'none';
+
+    const email = document.getElementById('masukEmail').value.trim();
+    const password = document.getElementById('masukPassword').value;
+
+    let valid = true;
+    if (!email || !email.includes('@')) { markInvalid(form, 'email'); valid = false; }
+    if (!password) { markInvalid(form, 'password'); valid = false; }
+
+    if (!valid){
+      document.getElementById('masukAlert').style.display = 'block';
+      return;
+    }
+
+    // Simulasi: karena belum ada database asli, login dianggap berhasil
+    // dengan data minimal dari yang diketik.
+    currentUser = { nama: email.split('@')[0], email, via: 'masuk' };
+    renderProfile();
+    enterApp();
+  });
+
+  function renderProfile(){
+    const initial = currentUser.nama.trim().charAt(0).toUpperCase() || '?';
+    document.getElementById('profileAvatarInitial').textContent = initial;
+    document.getElementById('profileBtnName').textContent = currentUser.nama;
+    document.getElementById('pdName').textContent = currentUser.nama;
+    document.getElementById('pdEmail').textContent = currentUser.email || '—';
+  }
+
+  function logout(){
+    currentUser = null;
+    document.getElementById('formDaftar').reset();
+    document.getElementById('formMasuk').reset();
+    clearErrors(document.getElementById('formDaftar'));
+    clearErrors(document.getElementById('formMasuk'));
+    closeProfileDropdown();
+    document.querySelectorAll('.content-area').forEach(el => el.classList.add('hidden'));
+    document.getElementById('topbarApp').classList.add('hidden');
+    document.getElementById('mobileTabbar').classList.add('hidden');
+    document.getElementById('topbarGuest').classList.remove('hidden');
+    showScreen('gate');
+  }
+</script>
+
+</body>
+</html>

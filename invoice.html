@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice Pembayaran</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f6fb;
+}
+
+header{
+    background:#fff;
+    border-bottom:1px solid #ddd;
+    padding:20px 30px;
+}
+
+header h2{
+    margin:0;
+    color:#1F3A8F;
+}
+
+main{
+    max-width:750px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.invoice{
+    background:#fff;
+    border-radius:12px;
+    padding:35px;
+    border:1px solid #ddd;
+}
+
+.logo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.logo h1{
+    color:#1F3A8F;
+    margin:0;
+}
+
+.status{
+    color:green;
+    font-weight:bold;
+    font-size:18px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table td{
+    padding:12px;
+    border-bottom:1px solid #eee;
+}
+
+.total{
+    text-align:right;
+    margin-top:30px;
+}
+
+.total h2{
+    color:#1F3A8F;
+}
+
+.button-group{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+button{
+    background:#1F3A8F;
+    color:#fff;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#16306f;
+}
+/* ================= TEMA ORANGE ELEGAN ================= */
+
+body{
+    background:#FAF7F2;
+}
+
+/* Header */
+header{
+    background:#fff;
+    border-bottom:1px solid #D9B98F;
+}
+
+header h2{
+    color:#C96A16;
+}
+
+/* Invoice */
+.invoice{
+    border:1px solid #E6D3B8;
+}
+
+/* Logo */
+.logo h1{
+    color:#C96A16;
+}
+
+/* Status */
+.status{
+    color:#C96A16;
+}
+
+/* Tabel */
+table td{
+    border-bottom:1px solid #E6D3B8;
+}
+
+/* Total */
+.total h2{
+    color:#C96A16;
+}
+
+/* Tombol */
+button{
+    background:#C96A16;
+    color:#fff;
+}
+
+button:hover{
+    background:#A55410;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Altera</h2>
+
+</header>
+
+<main>
+
+<div class="invoice">
+
+<div class="logo">
+
+<div>
+
+<h1>INVOICE</h1>
+
+<p>No Invoice : INV-2026-0001</p>
+
+</div>
+
+<div class="status">
+
+LUNAS
+
+</div>
+
+</div>
+
+<table>
+
+<tr>
+<td>Nama</td>
+<td>Ria Gultom</td>
+</tr>
+
+<tr>
+<td>Program</td>
+<td>Fundamental</td>
+</tr>
+
+<tr>
+<td>Durasi</td>
+<td>1 Tahun</td>
+</tr>
+
+<tr>
+<td>Metode Pembayaran</td>
+<td>Transfer Bank</td>
+</tr>
+
+<tr>
+<td>Tanggal Pembayaran</td>
+<td>04 Juli 2026</td>
+</tr>
+
+<tr>
+<td>Kode Transaksi</td>
+<td>TRX240701001</td>
+</tr>
+
+</table>
+
+<div class="total">
+
+<h2>Total : Rp1.500.000</h2>
+
+</div>
+
+<div class="button-group">
+
+<button onclick="window.print()">
+🖨 Cetak Invoice
+</button>
+
+<button onclick="location.href='program.html'">
+📚 Kembali ke Program
+</button>
+
+</div>
+
+</div>
+
+</main>
+
+</body>
+</html>

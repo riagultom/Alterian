@@ -1,0 +1,356 @@
+<!DOCTYPE html><html lang='id'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Try Out</title><style>
+body{margin:0;font-family:Arial;background:#f7f8fb}
+header{display:flex;justify-content:space-between;align-items:center;background:#fff;padding:18px 30px;border-bottom:1px solid #ddd}
+nav a{margin:0 8px;text-decoration:none;color:#333;padding:8px 12px;border-radius:6px}
+nav a.active{background:#1F3A8F;color:#fff}
+main{max-width:900px;margin:40px auto;padding:0 20px}
+.card{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:20px;
+
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+}
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.card img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:10px;
+    flex-shrink:0;
+}
+
+.card-content{
+    flex:1;
+}
+
+.card-content h3{
+    margin-top:0;
+    color:#1F3A8F;
+}
+
+.card-content p{
+    line-height:1.6;
+    color:#555;
+}
+button{background:#1F3A8F;color:#fff;border:none;padding:10px 16px;border-radius:6px;cursor:pointer}
+.profile-menu{
+    position:relative;
+    display:inline-block;
+}
+
+.profile-btn{
+    background:white;
+    border:2px solid #f0a000;
+    color:#f0a000;
+    padding:10px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.profile-btn:hover{
+    background:#f0a000;
+    color:white;
+}
+
+.dropdown{
+    display:none;
+    position:absolute;
+    right:0;
+    top:45px;
+    background:white;
+    min-width:220px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    overflow:hidden;
+    z-index:100;
+}
+
+.dropdown a{
+    display:block;
+    padding:12px 15px;
+    text-decoration:none;
+    color:#333;
+}
+
+.dropdown a:hover{
+    background:#f2f2f2;
+}
+
+.show{
+    display:block;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+}
+.saldo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#FFF2CC;
+    padding:10px 18px;
+    border-radius:15px;
+    border:1px solid #FFD15C;
+}
+
+.saldo img{
+    width:45px;
+    height:45px;
+}
+
+.saldo-text small{
+    display:block;
+    color:#666;
+    font-size:12px;
+}
+
+.saldo-text h3{
+    margin:0;
+    color:#1F3A8F;
+}
+
+.topup-btn{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.topup-btn:hover{
+    background:#16306f;
+}
+
+body{
+    background:#FFF8F1;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:#fff;
+    border-bottom:1px solid #FFD7A8;
+}
+
+.logo{
+    color:#F57C00;
+}
+
+nav a.active{
+    background:#F57C00;
+    color:white;
+}
+
+nav a:hover{
+    background:#F57C00;
+    color:white;
+}
+
+/* ================= HEADER RIGHT ================= */
+
+.saldo{
+    background:#FFF3E0;
+    border:1px solid #FFB74D;
+}
+
+.saldo-text h3{
+    color:#F57C00;
+}
+
+.topup-btn{
+    background:#F57C00;
+    color:white;
+}
+
+.topup-btn:hover{
+    background:#E65100;
+}
+
+/* ================= PROFILE ================= */
+
+.profile-btn{
+    background:white;
+    border:2px solid #F57C00;
+    color:#F57C00;
+}
+
+.profile-btn:hover{
+    background:#F57C00;
+    color:white;
+}
+
+/* ================= CONTENT ================= */
+
+main h1{
+    color:#F57C00;
+}
+
+.card-content h3{
+    color:#F57C00;
+}
+
+button{
+    background:#F57C00;
+    color:white;
+}
+
+button:hover{
+    background:#E65100;
+}
+
+</style></head><body>
+<header><h2>Altera</h2><nav>
+<a href="program.html" class="">Program Belajar</a>
+<a href="tryout.html" class="active">Try Out</a>
+
+</nav>
+
+<div class="header-right">
+
+<div class="saldo">
+
+<img src="coin.png">
+
+<div class="saldo-text">
+<small>Tesseract</small>
+<h3>50</h3>
+</div>
+
+<button class="topup-btn"
+onclick="location.href='topup.html'">
++ Top Up
+</button>
+
+</div>
+
+<div class="profile-menu">
+
+<button class="profile-btn"
+onclick="toggleMenu()">
+
+👤 Profil
+
+</button>
+
+<div class="dropdown" id="dropdownMenu">
+
+<a href="akun.html">
+Akun Saya
+</a>
+
+<a href="riwayat.html">
+Riwayat Pembelian Paket
+</a>
+
+<a href="index.html">
+Logout
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<main>
+    <h1>Try Out</h1>
+    <div class="card">
+
+    <img src="itb.webp" alt="Try Out ITB">
+
+    <div class="card-content">
+
+        <h3>TRYOUT SSU ITB 2026</h3>
+
+        <p>
+            Try Out SSU ITB 2026 bisa menjadi ruang latihan awal
+            untuk membantu kamu memahami bentuk soal,
+            mengevaluasi kesiapan, dan menumbuhkan rasa percaya diri
+            sebelum menghadapi SSU ITB.
+        </p>
+
+        <button onclick="location.href='detail_tryout.html'">
+    Lihat Detail
+</button>
+    </div>
+
+</div> <!-- Penutup card pertama -->
+
+<div class="card">
+
+    <img src="ui.jpg" alt="Try Out UI">
+
+    <div class="card-content">
+
+        <h3>TRYOUT SIMAK UI 2026</h3>
+
+        <p>
+            Lewat Try Out SIMAK UI 2026, kamu bisa mulai mengenali pola soal,
+            melihat kesiapan diri, dan membangun keyakinan untuk menghadapi
+            seleksi SIMAK UI dengan lebih mantap.
+        </p>
+
+        <button onclick="location.href='detail_tryout1.html'">
+    Lihat Detail
+</button>
+
+    </div>
+
+</div> <!-- Penutup card kedua -->
+<div class="card">
+
+    <img src="ugm.jpg" alt="Try Out UGM">
+
+    <div class="card-content">
+
+        <h3>TRYOUT UM UGM 2026</h3>
+
+        <p>
+            Sebagai langkah awal persiapan UM UGM 2026, try out ini
+            dirancang untuk membantumu memahami karakter soal, mengukur kemampuan,dan menyiapkan diri 
+            dengan lebih terarah.
+        </p>
+
+        <button onclick="location.href='detail_tryout2.html'">
+    Lihat Detail
+</button>
+
+    </div>
+
+</div> <!-- Penutup card kedua -->
+<script>
+function toggleMenu(){
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+window.onclick = function(event){
+    if(!event.target.matches('.profile-btn')){
+        var menu = document.getElementById("dropdownMenu");
+        if(menu.classList.contains("show")){
+            menu.classList.remove("show");
+        }
+    }
+}
+</script>
+</main>
+</body>
+</html>

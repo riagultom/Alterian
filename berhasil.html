@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pembayaran Berhasil</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f7f8fb;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:18px 30px;
+    border-bottom:1px solid #ddd;
+}
+
+header h2{
+    margin:0;
+    color:#1F3A8F;
+}
+
+nav a{
+    margin:0 8px;
+    text-decoration:none;
+    color:#333;
+    padding:8px 12px;
+    border-radius:6px;
+}
+
+nav a:hover{
+    background:#1F3A8F;
+    color:white;
+}
+
+main{
+    max-width:700px;
+    margin:50px auto;
+    padding:0 20px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:12px;
+    padding:35px;
+    text-align:center;
+}
+
+.success{
+    font-size:70px;
+    color:#28a745;
+}
+
+h1{
+    color:#1F3A8F;
+    margin-top:10px;
+}
+
+.status{
+    background:#eafaf1;
+    border-left:5px solid #28a745;
+    padding:15px;
+    margin:25px 0;
+    text-align:left;
+    border-radius:8px;
+}
+
+.status p{
+    margin:10px 0;
+    font-size:16px;
+}
+
+.button-group{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+button{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+button:hover{
+    background:#16306f;
+}
+/* ================= TEMA ORANGE ELEGAN ================= */
+
+body{
+    background:#FAF7F2;
+}
+
+/* Header */
+header{
+    background:#fff;
+    border-bottom:1px solid #D9B98F;
+}
+
+header h2{
+    color:#C96A16;
+}
+
+/* Navigasi */
+nav a:hover{
+    background:#C96A16;
+    color:#fff;
+}
+
+/* Card */
+.card{
+    border:1px solid #E6D3B8;
+}
+
+/* Ikon Sukses */
+.success{
+    color:#C96A16;
+}
+
+/* Judul */
+h1{
+    color:#C96A16;
+}
+
+/* Status */
+.status{
+    background:#F8F3EC;
+    border-left:5px solid #C96A16;
+}
+
+.status p{
+    color:#555;
+}
+
+/* Tombol */
+button{
+    background:#C96A16;
+    color:#fff;
+}
+
+button:hover{
+    background:#A55410;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h2>Alterian</h2>
+
+<button onclick="location.href='pembayaran.html'">
+        ← Kembali
+    </button>
+
+</header>
+
+<main>
+
+<div class="card">
+
+<div class="success">
+✅
+</div>
+
+<h1>Pembayaran Berhasil</h1>
+
+<p>
+Terima kasih! Pembayaran Anda telah berhasil diproses.
+</p>
+
+<div class="status">
+
+<p><strong>Kode Transaksi :</strong> TRX240701001</p>
+
+<p><strong>Program :</strong> Fundamental</p>
+
+<p><strong>Total Bayar :</strong> Rp1.500.000</p>
+
+<p><strong>Metode :</strong> Transfer Bank</p>
+
+<p><strong>Status :</strong> <span style="color:green;font-weight:bold;">Lunas</span></p>
+
+<p><strong>Tanggal :</strong> 01 Juli 2026</p>
+
+</div>
+
+<div class="button-group">
+
+    <button onclick="location.href='invoice.html'">
+Unduh pembayaran
+</button>
+
+<button onclick="location.href='ayobelajar.html'">
+📚 Mulai Belajar
+</button>
+
+
+</div>
+
+</div>
+
+</main>
+
+</body>
+</html>

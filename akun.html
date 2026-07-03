@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akun Saya | Cakra Edu</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:18px 30px;
+    border-bottom:1px solid #ddd;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#1F3A8F;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin:0 10px;
+    padding:8px 15px;
+    border-radius:6px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:#1F3A8F;
+    color:white;
+}
+
+.profile-menu{
+    position:relative;
+}
+
+.profile-btn{
+    background:#1F3A8F;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.profile-btn:hover{
+    background:#16306f;
+}
+
+.dropdown{
+    display:none;
+    position:absolute;
+    right:0;
+    top:45px;
+    width:220px;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    overflow:hidden;
+    z-index:100;
+}
+
+.dropdown a{
+    display:block;
+    padding:12px 15px;
+    text-decoration:none;
+    color:#333;
+}
+
+.dropdown a:hover{
+    background:#f2f2f2;
+}
+
+.show{
+    display:block;
+}
+
+/* ================= CONTENT ================= */
+
+.container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.profile-card{
+    background:linear-gradient(135deg,#1F3A8F,#3d5ec7);
+    color:white;
+    border-radius:15px;
+    padding:30px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.profile-card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:5px solid white;
+}
+
+.profile-info h2{
+    margin-bottom:8px;
+}
+
+.profile-info p{
+    opacity:.9;
+}
+
+.menu{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.menu button{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.menu button.active{
+    background:#1F3A8F;
+    color:white;
+}
+
+.menu button:not(.active){
+    background:white;
+    border:1px solid #ddd;
+}
+
+.content{
+    background:white;
+    border-radius:12px;
+    padding:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input,select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.save-btn{
+    margin-top:20px;
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.save-btn:hover{
+    background:#16306f;
+}
+
+.hidden{
+    display:none;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+}
+.saldo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#FFF2CC;
+    padding:10px 18px;
+    border-radius:15px;
+    border:1px solid #FFD15C;
+}
+
+.saldo img{
+    width:45px;
+    height:45px;
+}
+
+.saldo-text small{
+    display:block;
+    color:#666;
+    font-size:12px;
+}
+
+.saldo-text h3{
+    margin:0;
+    color:#1F3A8F;
+}
+
+.topup-btn{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.topup-btn:hover{
+    background:#16306f;
+}
+.profile-menu{
+    position:relative;
+    display:inline-block;
+}
+
+.profile-btn{
+    background:white;
+    border:2px solid #f0a000;
+    color:#f0a000;
+    padding:10px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.profile-btn:hover{
+    background:#f0a000;
+    color:white;
+}
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+/* ================= TEMA ORANGE ELEGAN ================= */
+
+body{
+    background:#FAF7F2;
+}
+
+header{
+    background:#fff;
+    border-bottom:1px solid #D9B98F;
+}
+
+.logo{
+    color:#C96A16;
+}
+
+nav a:hover{
+    background:#C96A16;
+    color:#fff;
+}
+
+.profile-card{
+    background:linear-gradient(135deg,#C96A16,#A55410);
+}
+
+.menu button.active{
+    background:#C96A16;
+    color:#fff;
+}
+
+.menu button:not(.active):hover{
+    background:#F3E5D0;
+    color:#C96A16;
+    border-color:#C96A16;
+}
+
+.save-btn{
+    background:#C96A16;
+}
+
+.save-btn:hover{
+    background:#A55410;
+}
+
+.saldo{
+    background:#F3E5D0;
+    border:1px solid #D9B98F;
+}
+
+.saldo-text h3{
+    color:#C96A16;
+}
+
+.topup-btn{
+    background:#C96A16;
+}
+
+.topup-btn:hover{
+    background:#A55410;
+}
+
+.profile-btn{
+    background:#fff;
+    border:2px solid #C96A16;
+    color:#C96A16;
+}
+
+.profile-btn:hover{
+    background:#C96A16;
+    color:#fff;
+}
+
+.dropdown{
+    border:1px solid #D9B98F;
+}
+
+.dropdown a:hover{
+    background:#F8EFE2;
+}
+
+.content{
+    border:1px solid #E6D3B8;
+}
+
+input:focus,
+select:focus{
+    border-color:#C96A16;
+    box-shadow:0 0 5px rgba(201,106,22,.25);
+}
+
+button{
+    background:#C96A16;
+}
+
+button:hover{
+    background:#A55410;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Alterian</div>
+
+<nav>
+
+<a href="program.html">Program Belajar</a>
+
+<a href="tryout.html">Try Out</a>
+
+
+</nav>
+<div class="header-right">
+
+<div class="saldo">
+
+<img src="coin.png">
+
+<div class="saldo-text">
+<small>Tesseract</small>
+<h3>200</h3>
+</div>
+
+<button class="topup-btn"
+onclick="location.href='topup.html'">
++ Top Up
+</button>
+
+</div>
+
+<div class="profile-menu">
+
+<button class="profile-btn"
+onclick="toggleMenu()">
+
+👤 Profil
+
+</button>
+
+<div class="dropdown" id="dropdownMenu">
+
+<a href="akun.html">
+Akun Saya
+</a>
+
+<a href="riwayat.html">
+Riwayat Pembelian Paket
+</a>
+
+<a href="index.html">
+Logout
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<div class="profile-card">
+
+<img src="riaitb.png" alt="Foto Profil">
+
+<div class="profile-info">
+
+<h2>Ria Gultom</h2>
+
+<p>riagultom@gmail.com</p>
+
+<p>Admin Altera</p>
+
+</div>
+
+</div>
+
+<div class="menu">
+
+<button class="active" id="btnData"
+onclick="showData()">
+
+👤 Data Pribadi
+
+</button>
+
+<button id="btnKampus"
+onclick="showKampus()">
+
+🎓 Kampus Pilihan
+
+</button>
+
+</div>
+<!-- ================= DATA PRIBADI ================= -->
+
+<div class="content" id="dataPribadi">
+
+<h2 style="margin-bottom:25px;color:#1F3A8F;">
+Data Pribadi
+</h2>
+
+<div class="form-group">
+<label>Nama Lengkap</label>
+<input type="text" value="Ria Gultom">
+</div>
+
+<div class="form-group">
+<label>Email</label>
+<input type="email" value="riagultom@gmail.com">
+</div>
+
+<div class="form-group">
+<label>Nomor HP</label>
+<input type="text" value="081234567890">
+</div>
+
+<div class="form-group">
+<label>Kelas</label>
+<select>
+
+<option>X SMA</option>
+
+<option>XI SMA</option>
+
+<option selected>XII SMA</option>
+
+<option>Gap Year</option>
+
+</select>
+</div>
+
+<div class="form-group">
+<label>Asal Sekolah</label>
+<input type="text" value="SMA Negeri 1">
+</div>
+
+<div class="form-group">
+<label>Status Akun</label>
+<input type="text" value="Aktif" readonly>
+</div>
+
+<button class="save-btn">
+💾 Simpan Perubahan
+</button>
+
+</div>
+
+<!-- ================= KAMPUS PILIHAN ================= -->
+
+<div class="content hidden" id="kampusPilihan">
+
+<h2 style="margin-bottom:25px;color:#1F3A8F;">
+Kampus Pilihan
+</h2>
+
+<div class="form-group">
+<label>Pilihan Kampus 1</label>
+
+<select>
+
+<option selected>Universitas Indonesia</option>
+
+<option>Institut Teknologi Bandung</option>
+
+<option>Universitas Gadjah Mada</option>
+
+<option>Universitas Padjadjaran</option>
+
+<option>Universitas Brawijaya</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Jurusan Pilihan 1</label>
+
+<input type="text" value="Sistem Informasi">
+
+</div>
+
+<div class="form-group">
+
+<label>Pilihan Kampus 2</label>
+
+<select>
+
+<option>Universitas Indonesia</option>
+
+<option selected>Institut Teknologi Bandung</option>
+
+<option>Universitas Gadjah Mada</option>
+
+<option>Universitas Padjadjaran</option>
+
+<option>Universitas Brawijaya</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Jurusan Pilihan 2</label>
+
+<input type="text" value="Teknik Informatika">
+
+</div>
+
+<div class="form-group">
+
+<label>Target Nilai SNBT</label>
+
+<input type="text" value="720">
+
+</div>
+
+<button class="save-btn">
+
+💾 Simpan Pilihan Kampus
+
+</button>
+
+</div>
+
+</div>
+<script>
+
+// ================= MENU PROFIL =================
+
+function toggleMenu(){
+    document.getElementById("dropdownMenu").classList.toggle("show");
+}
+
+window.onclick = function(event){
+
+    if(!event.target.matches('.profile-btn')){
+
+        var menu = document.getElementById("dropdownMenu");
+
+        if(menu.classList.contains("show")){
+            menu.classList.remove("show");
+        }
+
+    }
+
+}
+
+// ================= GANTI MENU =================
+
+function showData(){
+
+    document.getElementById("dataPribadi").classList.remove("hidden");
+    document.getElementById("kampusPilihan").classList.add("hidden");
+
+    document.getElementById("btnData").classList.add("active");
+    document.getElementById("btnKampus").classList.remove("active");
+
+}
+
+function showKampus(){
+
+    document.getElementById("kampusPilihan").classList.remove("hidden");
+    document.getElementById("dataPribadi").classList.add("hidden");
+
+    document.getElementById("btnKampus").classList.add("active");
+    document.getElementById("btnData").classList.remove("active");
+
+}
+
+// ================= TOMBOL SIMPAN =================
+
+const tombol = document.querySelectorAll(".save-btn");
+
+tombol.forEach(function(btn){
+
+    btn.addEventListener("click",function(){
+
+        alert("Data berhasil disimpan.");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>

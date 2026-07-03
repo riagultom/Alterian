@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pembayaran Top Up</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:18px 30px;
+    border-bottom:1px solid #ddd;
+}
+
+.logo{
+    font-size:28px;
+    color:#1F3A8F;
+    font-weight:bold;
+}
+
+.back-btn{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.back-btn:hover{
+    background:#16306f;
+}
+.back-btn{
+    width:auto;
+    background:#1F3A8F;
+    color:white;
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.back-btn:hover{
+    background:#16306f;
+}
+.container{
+    max-width:700px;
+    margin:40px auto;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.card h1{
+    color:#7E2F8E;
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.info{
+    background:#f8f8f8;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:25px;
+}
+
+.info p{
+    margin:10px 0;
+    font-size:17px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+select{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    margin-bottom:20px;
+    font-size:15px;
+}
+
+.total{
+    background:#EEF3FF;
+    border-left:5px solid #1F3A8F;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:25px;
+}
+
+.total h2{
+    color:#1F3A8F;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#FFB300;
+    color:#333;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#F4A000;
+}
+/* ================= TEMA ORANGE ELEGAN ================= */
+
+body{
+    background:#FAF7F2;
+}
+
+/* Header */
+header{
+    background:#fff;
+    border-bottom:1px solid #D9B98F;
+}
+
+/* Logo */
+.logo{
+    color:#C96A16;
+}
+
+/* Tombol Kembali */
+.back-btn{
+    background:#C96A16;
+    color:#fff;
+}
+
+.back-btn:hover{
+    background:#A55410;
+}
+
+/* Card */
+.card{
+    border:1px solid #E6D3B8;
+}
+
+/* Judul */
+.card h1{
+    color:#C96A16;
+}
+
+/* Informasi */
+.info{
+    background:#F8F3EC;
+    border:1px solid #E6D3B8;
+}
+
+/* Input */
+select{
+    border:1px solid #D9B98F;
+}
+
+select:focus{
+    outline:none;
+    border-color:#C96A16;
+    box-shadow:0 0 5px rgba(201,106,22,.25);
+}
+
+/* Total */
+.total{
+    background:#F8F3EC;
+    border-left:5px solid #C96A16;
+}
+
+.total h2{
+    color:#C96A16;
+}
+
+/* Tombol */
+button{
+    background:#C96A16;
+    color:#fff;
+}
+
+button:hover{
+    background:#A55410;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+Altera
+</div>
+
+<button class="back-btn"
+onclick="history.back()">
+← Kembali
+</button>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Pembayaran Top Up</h1>
+
+<div class="info">
+
+<p><strong>Produk</strong> : 2x Try Out</p>
+
+<p><strong>Tesseract</strong> : 200</p>
+
+<p><strong>Harga</strong> : Rp50.000</p>
+
+</div>
+
+<label>Metode Pembayaran</label>
+
+<select>
+
+<option>Transfer Bank BCA</option>
+
+<option>Transfer Bank BRI</option>
+
+<option>Transfer Bank Mandiri</option>
+
+<option>Transfer Bank BNI</option>
+
+<option>QRIS</option>
+
+<option>DANA</option>
+
+<option>OVO</option>
+
+<option>GoPay</option>
+
+</select>
+
+<div class="total">
+
+<h2>Total Bayar</h2>
+
+<h2>Rp50.000</h2>
+
+</div>
+
+<button onclick="location.href='berhasil_topup.html'">
+
+Bayar Sekarang
+
+</button>
+
+</div>
+
+</div>
+
+</body>
+</html>

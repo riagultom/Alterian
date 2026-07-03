@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar Transaksi</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f7f8fb;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:18px 30px;
+    border-bottom:1px solid #ddd;
+}
+
+header h2{
+    margin:0;
+    color:#1F3A8F;
+}
+
+button{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#16306f;
+}
+
+main{
+    max-width:1000px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:25px;
+    border:1px solid #ddd;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+th{
+    background:#1F3A8F;
+    color:white;
+}
+
+tr:nth-child(even){
+    background:#f2f2f2;
+}
+
+.status{
+    color:green;
+    font-weight:bold;
+}
+/* ================= TEMA ORANGE ELEGAN ================= */
+
+body{
+    background:#FAF7F2;
+}
+
+/* Header */
+header{
+    background:#fff;
+    border-bottom:1px solid #D9B98F;
+}
+
+header h2{
+    color:#C96A16;
+}
+
+/* Card */
+.card{
+    border:1px solid #E6D3B8;
+}
+
+/* Tombol */
+button{
+    background:#C96A16;
+    color:#fff;
+}
+
+button:hover{
+    background:#A55410;
+}
+
+/* Tabel */
+th{
+    background:#C96A16;
+    color:#fff;
+}
+
+th,
+td{
+    border:1px solid #D9B98F;
+}
+
+tr:nth-child(even){
+    background:#F8F3EC;
+}
+
+tr:hover{
+    background:#F3E5D0;
+}
+
+/* Status */
+.status{
+    color:#C96A16;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<h2>Altera</h2>
+
+<button onclick="location.href='program.html'">
+← Kembali
+</button>
+
+</header>
+
+<main>
+
+<div class="card">
+
+<h2>Daftar Transaksi</h2>
+
+<table>
+
+<tr>
+<th>No</th>
+<th>Nama Transaksi</th>
+<th>Jumlah</th>
+<th>Kategori</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Kelas Fundamental</td>
+<td>Rp1.500.000</td>
+<td>Program Belajar</td>
+<td class="status">Lunas</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Try Out Akbar</td>
+<td>Rp75.000</td>
+<td>Try Out</td>
+<td class="status">Lunas</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Modul Matematika</td>
+<td>Rp50.000</td>
+<td>Materi</td>
+<td class="status">Lunas</td>
+</tr>
+
+</table>
+
+</div>
+
+</main>
+
+</body>
+</html>

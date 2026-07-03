@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top Up Tesseract</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:18px 30px;
+    border-bottom:1px solid #ddd;
+}
+
+.logo{
+    color:#1F3A8F;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.back-btn{
+    background:#1F3A8F;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.back-btn:hover{
+    background:#16306f;
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:35px auto;
+}
+
+/* BANNER */
+
+.banner{
+    background:linear-gradient(135deg,#8E44AD,#A65ACB);
+    color:white;
+    border-radius:20px;
+    padding:30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    overflow:hidden;
+    margin-bottom:35px;
+}
+
+.banner-text h1{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.banner-text p{
+    font-size:17px;
+}
+
+.banner img{
+    width:230px;
+}
+
+/* TITLE */
+
+.title{
+    text-align:center;
+    color:#7E2F8E;
+    margin-bottom:30px;
+    font-size:30px;
+}
+
+/* CARD */
+
+.card{
+    background:white;
+    border-radius:22px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+}
+
+.left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.left img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+
+.info h2{
+    color:#512D6D;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.info p{
+    color:#666;
+    font-size:18px;
+    line-height:1.5;
+}
+
+.price{
+    text-align:center;
+}
+
+.price small{
+    color:#555;
+    font-size:18px;
+}
+
+.price h3{
+    color:#7E2F8E;
+    font-size:34px;
+    margin-top:8px;
+}
+
+.buy button{
+    background:#FFB300;
+    border:none;
+    color:#333;
+    font-weight:bold;
+    font-size:18px;
+    padding:15px 40px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.buy button:hover{
+    background:#f4a300;
+}
+/* ================= TEMA ORANGE ELEGAN ================= */
+
+body{
+    background:#FAF7F2;
+}
+
+/* Header */
+header{
+    background:#fff;
+    border-bottom:1px solid #D9B98F;
+}
+
+/* Logo */
+.logo{
+    color:#C96A16;
+}
+
+/* Tombol Kembali */
+.back-btn{
+    background:#C96A16;
+    color:#fff;
+}
+
+.back-btn:hover{
+    background:#A55410;
+}
+
+/* Banner */
+.banner{
+    background:linear-gradient(135deg,#C96A16,#A55410);
+}
+
+/* Judul */
+.title{
+    color:#C96A16;
+}
+
+/* Card */
+.card{
+    border:1px solid #E6D3B8;
+}
+
+/* Informasi */
+.info h2{
+    color:#C96A16;
+}
+
+.info p{
+    color:#666;
+}
+
+/* Harga */
+.price h3{
+    color:#C96A16;
+}
+
+.price small{
+    color:#777;
+}
+
+/* Tombol Beli */
+.buy button{
+    background:#C96A16;
+    color:#fff;
+}
+
+.buy button:hover{
+    background:#A55410;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Altera
+</div>
+
+<button class="back-btn"
+onclick="location.href='program.html'">
+← Kembali
+</button>
+
+</header>
+
+<div class="container">
+
+<div class="banner">
+
+<div class="banner-text">
+
+<h1>TOP UP TESSERACT</h1>
+
+<p>Silakan dipilih sesuai kebutuhan kamu</p>
+
+</div>
+
+<img src="catcoin.png" alt="Top Up">
+
+</div>
+
+<h1 class="title">
+Pilihan Top Up Tesseract
+</h1>
+<!-- ================= CARD 1 ================= -->
+
+<div class="card">
+
+    <div class="left">
+
+        <img src="coin.png" alt="Coin">
+
+        <div class="info">
+
+            <h2>2x Try Out</h2>
+
+            <p>✔ Mendapatkan</p>
+
+            <p><strong>200 Tesseract</strong></p>
+
+        </div>
+
+    </div>
+
+    <div class="price">
+
+        <small>Harga</small>
+
+        <h3>Rp50.000</h3>
+
+    </div>
+
+    <div class="buy">
+
+        <button onclick="location.href='pembayaran_topup.html'">
+            Beli
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= CARD 2 ================= -->
+
+<div class="card">
+
+    <div class="left">
+
+        <img src="coin.png" alt="Coin">
+
+        <div class="info">
+
+            <h2>10x Try Out</h2>
+
+            <p>✔ Mendapatkan</p>
+
+            <p><strong>1000 Tesseract</strong></p>
+
+        </div>
+
+    </div>
+
+    <div class="price">
+
+        <small>Harga</small>
+
+        <h3>Rp150.000</h3>
+
+    </div>
+
+    <div class="buy">
+
+        <button onclick="location.href='pembayaran_topup.html'">
+            Beli
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= CARD 3 ================= -->
+
+<div class="card">
+
+    <div class="left">
+
+        <img src="coin.png" alt="Coin">
+
+        <div class="info">
+
+            <h2>20x Try Out</h2>
+
+            <p>✔ Mendapatkan</p>
+
+            <p><strong>2000 Tesseract</strong></p>
+
+        </div>
+
+    </div>
+
+    <div class="price">
+
+        <small>Harga</small>
+
+        <h3>Rp200.000</h3>
+
+    </div>
+
+    <div class="buy">
+
+        <button onclick="location.href='pembayaran_topup.html'">
+            Beli
+        </button>
+
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>
